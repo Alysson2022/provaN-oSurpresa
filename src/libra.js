@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './index.css'
 
 export default function Libra() {
 
@@ -25,10 +25,9 @@ export default function Libra() {
 
 
     return(
-        <main>
-            <div>oiii</div>
+        <main className="page-signo">
 
-
+            <h1>Calcular Signo </h1>
             <div>
                 Dia:  <input type='number' value={dia} onChange={e => setDia(Number(e.target.value))} />
             </div>

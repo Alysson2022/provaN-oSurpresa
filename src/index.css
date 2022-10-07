@@ -1,13 +1,49 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-signo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;  
+  width: 100%;
+  align-items: center;
+  
+  background-image: url(https://www.rbsdirect.com.br/imagesrc/24943071.jpg?w=700);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  padding: 2em;
+}
+
+.page-acai{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;  
+  width: 100%;
+  align-items: center;
+  color: #ffffff;
+  
+  background-image: url(https://img.freepik.com/fotos-premium/acai-homem-segurando-uma-tigela-de-sorvete-de-acai-congelado-brasileiro-com-frutas-na-mesa-de-madeira-vista-frontal-do-menu-de-verao_317399-584.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  padding: 2em;
+}
+
+.page-grama{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50vh;  
+  width: 100%;
+  align-items: center;
+  
+  background-image: url(https://a3.vnda.com.br/ortoponto/2019/07/16/supermbal-balanca-digital-para-controle-de-peso-supermedy-7369.jpg?v=1563310635);
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  padding: 2em;
 }

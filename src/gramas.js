@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './index.css'
 
 
 
@@ -22,17 +22,23 @@ export default function Calcular() {
 
 
     return (
-        <main>
-            <h1> Calcular Gramas</h1>
-            
+        <main className="page-grama">
+            <div>
+                <h1> Calcular Gramas</h1>
+            </div>
 
             <div>
                 <input type='number' value={gramas} onChange={e => setGramas(Number(e.target.value))} />
             </div>
 
+            <div>
             <button onClick={calculo}>Calcular</button>
+            </div>
+
+            <div>
 
             O total a pagar é R${resp}
+            </div>
 
         </main>
     )

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './index.css'
 
 
 
@@ -21,7 +22,7 @@ export default function Acai(){
 
 
     return(
-        <main>
+        <main className="page-acai">
             <h1>Calcular Gramas</h1>
 
             <div>
