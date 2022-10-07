@@ -1,6 +1,8 @@
 import { useState } from "react"
 import './index.css'
 
+import { calcularGrama } from "./service";
+
 
 
 
@@ -10,14 +12,13 @@ export default function Calcular() {
 
 
     function calculo(){
-        let total = 0
-        if(gramas >= 1000){
-           total = (gramas / 100) * 3.0;
-        }
-        else
-           total = (gramas / 100) * 3.5;
+        try{
+        let total = calcularGrama(gramas);
 
-        setResp(total);
+        setResp(' O total a pagar é R$' + total);
+        } catch(err) {
+            setResp(err.message)
+        }
     }
 
 
@@ -37,7 +38,7 @@ export default function Calcular() {
 
             <div>
 
-            O total a pagar é R${resp}
+           {resp}
             </div>
 
         </main>

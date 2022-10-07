@@ -1,24 +1,22 @@
 import { useState } from "react"
 import './index.css'
 
+import {libra} from './service'
+
 export default function Libra() {
 
     const[dia, setDia] = useState(0);
     const[mes, setMes] = useState('');
     const[resp, setResp] = useState('');
 
-    function verificarSigno() {
-        let msg = '';
-
-        if(dia >= 23 && mes == 'setembro' || dia <= 22 && mes == 'outubro' ) {
-            msg = 'sim'
+    function chamarSigno() {
+        try{
+        let msg = libra(mes, dia);
+        
+        setResp('É do signo de Libra? ' + msg);
+        } catch(err){
+            setResp(err.message)
         }
-
-        else{
-            msg = 'nao'
-        }
-
-        setResp(msg);
     }
 
     
@@ -29,16 +27,17 @@ export default function Libra() {
 
             <h1>Calcular Signo </h1>
             <div>
-                Dia:  <input type='number' value={dia} onChange={e => setDia(Number(e.target.value))} />
+                Dia:  <input type='number' min={0} value={dia} onChange={e => setDia(Number(e.target.value))} />
             </div>
 
             <div>
                 Mês:  <input type='text' value={mes} onChange={e => setMes(e.target.value)} />
             </div>
 
-            <button onClick={verificarSigno}>Verificar</button>
+            <button onClick={chamarSigno}>Verificar</button>
         
-            É do signo de Libra? {resp} 
+            
+                {resp}
         </main>
     )
 }
