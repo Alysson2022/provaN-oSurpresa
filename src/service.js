@@ -1,6 +1,9 @@
 export function libra(mes, dia) {
         let msg = '';
 
+        if(!Number.isInteger(dia)) 
+            throw new Error('Somente número inteiros');
+
         if (dia <= 0 || dia >= 32)
             throw new Error('Dia Inválido');
 
@@ -31,6 +34,8 @@ export function calcular(qtdPeq, qtdMed, qtdGra, desc) {
 }
 
 export function calcularGrama(gramas) {
+
+        
 
         if(gramas < 0) 
             throw new Error('Peso inválido!')
