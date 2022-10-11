@@ -50,3 +50,64 @@ export function calcularGrama(gramas) {
         return total;
     }
 
+export function calcularSalario(salario, bonus, desc) {
+
+    if(salario < 0 || bonus < 0 || desc < 0) 
+            throw new Error('Alguma informação está inválida!')
+
+    let total = 0;
+
+    let bonussalario = (salario * bonus) / 100;
+    let soldo = salario + bonussalario;
+    total = soldo - desc;
+
+    return soldo;
+}
+
+export function calcularCombustivel(capac, consumo, dist) {   
+    
+    if(capac < 0 || consumo < 0 || dist < 0) 
+            throw new Error('Alguma informação está inválida!')
+
+    
+    let resultado = 0;
+
+    let litrosdistancia = dist / consumo;
+    let paradas = litrosdistancia / capac;
+
+    resultado = Math.ceil(paradas);
+
+    if(resultado === Infinity) {
+        return 'Consumo ou Capacidade não podem ser zero!';
+    }
+
+
+    // let autonomia = (capac * consumo) / dist;
+
+   
+    
+    return resultado;
+}
+ 
+
+export function calcularTemperatura(temp) {
+    if(temp < 36) {
+        return 'Hipotermia';
+    }
+
+    else if(temp >= 36 && temp < 37.6) {
+        return 'Normal';
+    }
+
+    else if(temp >= 37.6 && temp < 39.6) {
+        return 'Febre';
+    }
+
+    else if(temp >= 39.6 && temp < 41) {
+        return 'Febre alta';
+    }
+
+    else {
+        return 'Hipertermia';
+    }
+}
