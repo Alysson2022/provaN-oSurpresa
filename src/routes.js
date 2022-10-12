@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Acai from "./acai";
-import Gramas from './gramas'
-import Libra from "./libra";
-import Salario from "./salario";
-import Combustivel from "./combustivel";
-import Temperatura from "./febre";
+import Acai from "./exercicios/acai";
+import Gramas from './exercicios/gramas'
+import Libra from "./exercicios/libra";
+import Salario from "./exercicios/salario";
+import Combustivel from "./exercicios/combustivel";
+import Temperatura from "./exercicios/febre";
 
 export default function Router(){
 

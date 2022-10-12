@@ -61,7 +61,7 @@ export function calcularSalario(salario, bonus, desc) {
     let soldo = salario + bonussalario;
     total = soldo - desc;
 
-    return soldo;
+    return total;
 }
 
 export function calcularCombustivel(capac, consumo, dist) {   

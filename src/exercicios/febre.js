@@ -11,14 +11,14 @@ export default function Temperatura() {
         try{
             let resultado = calcularTemperatura(temperatura);
 
-            setResp(resultado);
+            setResp('A situação para sua temperatura é ' + resultado);
         } catch(err) {
             setResp(err.message);
         }
     }
 
     return(
-        <main>
+        <main className='page-febre'>
             <div>
                 <div>
                     Digite sua temperatura: <input type='number' placeholder='°celsius' value={temperatura} onChange={e => setTemperatura(e.target.value)} />

@@ -12,15 +12,14 @@ export default function Salario() {
         try{
             let resultado = calcularSalario(salario, bonus, desconto);
 
-            console.log(resultado);
-            setResp(resultado);
+            setResp('Seu salário líquido é de R$' + resultado);
         } catch(err) {
             setResp(err.message)
         }
     }
 
     return(
-        <main>
+        <main className="page-salario">
             <div>
                 <div>
                     Digite seu salário: <input type='number' placeholder='R$' value={salario} onChange={e => setSalario(Number(e.target.value))} />

@@ -12,14 +12,14 @@ export default function Combustivel() {
         try{
             let resultado = calcularCombustivel(capacidade, consumo, distancia);
 
-            setResp(resultado);
+            setResp('Você precisará fazer ' + resultado + ' paradas para abastecer');
         } catch(err) {
             setResp(err.message);
         }
     }
 
     return(
-        <main>
+        <main className='page-combusti'>
             <div>
                 <div>
                     Digite a capacidade do tanque: <input type='number' placeholder='Em litros' value={capacidade} onChange={e => setCapacidade(e.target.value)} />
