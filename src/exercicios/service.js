@@ -111,3 +111,41 @@ export function calcularTemperatura(temp) {
         return 'Hipertermia';
     }
 }
+
+export function orcamentoFamiliar(ganhos, gastos) {
+    let porcgastos = (gastos * 100) / ganhos;
+
+    if(porcgastos <= 20) {
+        return 'Parabéns, você está gerenciando bem seu orçamento!';
+    }
+
+    else if(porcgastos <= 50) {
+        return 'Muito bem, seus gastos não ultrapassam metade dos seus ganhos!';
+    }
+
+    else if(porcgastos <= 80) {
+        return 'Atenção, melhor conter os gastos!';
+    }
+
+    else if(porcgastos <= 100) {
+        return 'Cuidado, seu orçamento pode ficar comprometido!';
+    }
+
+    else {
+        return 'Orçamento comprometido! Hora de rever seus gastos!';
+    }
+}
+
+export function ingressoCinema(inteiras, meias, dia, nacional) {
+    let precoIngressos = (inteiras * 28.50) + (meias * 14.25);
+
+    if(nacional === true) {
+        precoIngressos = (inteiras * 5) + (meias * 5);
+    }
+
+    else if(dia === 'quarta-feira') {
+        precoIngressos = (inteiras * 14.25) + (meias * 14.25);
+    }
+
+    return precoIngressos;
+}
