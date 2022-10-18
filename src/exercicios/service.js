@@ -149,3 +149,47 @@ export function ingressoCinema(inteiras, meias, dia, nacional) {
 
     return precoIngressos;
 }
+
+
+export function contarAte(inicio, fim) {
+    let array = [];
+
+    for(let i = inicio; i <= fim; i++) {
+        array[i - inicio] = i;
+    }
+
+    return array;
+}
+
+export function linha(tamanho){
+    let array = [];
+    
+
+    for(let i = 0; i < tamanho; i++){
+        array[i] = '*';    
+    }
+    return array;
+}
+
+export function retanguloLinhas(base, altura) {
+    let arraygrande = [];
+    let array = [];
+
+   /* for(let i = 0; i < altura; i++) {
+        for(let h = 0; h < base; h++) {
+            array[h] = '*';
+        }*/
+
+
+    for(let i = 0; i < altura; i++) {
+        arraygrande[i] = array;
+
+        for(let h = 0; h < base; h++) {
+            array[h] = '*';
+        }
+    }
+        
+ //   }
+
+    return array;
+}

@@ -187,3 +187,26 @@
   transform: translateX(4px);
   background-color: antiquewhite;
 }
+
+
+.infos{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+.page-contar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 70vh;
+  width: 100vw;
+}
+
+.container-contar {
+  display: flex;
+  flex-direction: column;
+}
+

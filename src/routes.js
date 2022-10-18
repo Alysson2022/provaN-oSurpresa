@@ -8,6 +8,9 @@ import Combustivel from "./exercicios/combustivel";
 import Temperatura from "./exercicios/febre";
 import Orcamento from "./exercicios/orcamento";
 import IngressoCinema from "./exercicios/ingresso";
+import ContarAte from "./exercicios/contar";
+import Linha from './exercicios/linha'
+import Retangulo from './exercicios/retangulo'
 
 export default function Router(){
 
@@ -22,6 +25,9 @@ export default function Router(){
                 <Route path='/temperatura' element ={<Temperatura/>}/>
                 <Route path='/orcamento' element ={<Orcamento/>}/>
                 <Route path='/cinema' element ={<IngressoCinema/>}/>
+                <Route path='/contarate' element ={<ContarAte/>}/>
+                <Route path='/linha' element ={<Linha/>}/>
+                <Route path='/retangulo' element ={<Retangulo/>}/>
             </Routes>
         </BrowserRouter>
     )
