@@ -186,3 +186,47 @@ export function retanguloLinhas(base, altura) {
 
     return arraygrande;
 }
+
+
+
+export function calculoCafe(N, L, D) {
+    /* let litros = 1;
+    let pessoascomcafe = (L * 1000) / D;
+    let litrosemml = L * 1000;
+    let litrosemm = L * 1000;
+
+    let mililitrototal = N * D;
+
+    while(mililitrototal > litrosemml) {
+        litrosemml += litrosemm;
+        litros++;
+    }
+
+    console.log(litrosemml)
+
+    
+    if(D > (L * 1000)) {
+        let teste = (D / 1000) * N;
+        return teste;
+    } 
+
+    for(let i = 1; i <= L; i++) {
+        if(pessoascomcafe < N) {
+            litros *= i;
+            pessoascomcafe *= i;
+        }
+
+        
+    }
+
+    return litros; */
+
+    let tt = (N * D) / 1000;
+    let l = L;
+
+    while(tt > l){
+        l += L
+    }
+
+    return l;
+}
