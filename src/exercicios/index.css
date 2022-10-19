@@ -210,3 +210,10 @@
   flex-direction: column;
 }
 
+
+
+.container-asteriscos {
+  display: flex;
+  flex-direction: column;
+}
+

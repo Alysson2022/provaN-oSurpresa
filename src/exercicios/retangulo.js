@@ -3,16 +3,16 @@ import './index.css'
 import { retanguloLinhas } from './service';
 
 export default function Retangulo() {
-    const[base, setBase] = useState();
-    const[altura, setAltura] = useState();
-    const[resp, setResp] = useState([]);
+    const [base, setBase] = useState();
+    const [altura, setAltura] = useState();
+    const [resp, setResp] = useState([]);
 
-    function mostrarArray(){
-        try{
+    function mostrarArray() {
+        try {
             let resposta = retanguloLinhas(base, altura);
             console.log(resposta);
             setResp(resposta);
-        } catch(err){
+        } catch (err) {
             setResp(err.message);
         }
     }
@@ -28,7 +28,13 @@ export default function Retangulo() {
                     Altura: <input type='number' placeholder='altura' value={altura} onChange={e => setAltura(Number(e.target.value))} />
                 </div>
 
-                {resp}
+                <div className='container-asteriscos'>
+
+                    {resp.map(item =>
+                        <p> {item} </p>
+                    )}
+
+                </div>
 
                 <button onClick={mostrarArray}>Calcular</button>
             </div>
