@@ -230,3 +230,21 @@ export function calculoCafe(N, L, D) {
 
     return l;
 }
+
+export function calculoMontante(entrada, capital, taxa, periodo) {
+
+    
+
+
+    let capitalcalculado = entrada - capital;
+    let taxaemporc = taxa / 100;
+
+    let montante = capitalcalculado * Math.pow((1 + taxaemporc), periodo);
+    let juros = montante - capitalcalculado;
+    let valordaparcela = montante / (periodo * 12);
+
+    return ({
+       m: Math.abs(montante.toFixed(2)), 
+       j: Math.abs(juros.toFixed(2)), 
+       v: Math.abs(valordaparcela.toFixed(2))});
+}

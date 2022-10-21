@@ -12,6 +12,7 @@ import ContarAte from "./exercicios/contar";
 import Linha from './exercicios/linha'
 import Retangulo from './exercicios/retangulo'
 import Cafe from './exercicios/cafe'
+import JurosCompostos from "./exercicios/juros-compostos";
 
 export default function Router(){
 
@@ -30,6 +31,7 @@ export default function Router(){
                 <Route path='/linha' element ={<Linha/>}/>
                 <Route path='/retangulo' element ={<Retangulo/>}/>
                 <Route path='/cafe' element ={<Cafe/>}/>
+                <Route path='/juros' element ={<JurosCompostos/>}/>
             </Routes>
         </BrowserRouter>
     )
