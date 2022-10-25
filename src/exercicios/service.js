@@ -248,3 +248,32 @@ export function calculoMontante(entrada, capital, taxa, periodo) {
        j: Math.abs(juros.toFixed(2)), 
        v: Math.abs(valordaparcela.toFixed(2))});
 }
+
+export function listarAlunos(qtdAlunos) {
+    let array = [];
+
+    for(let i = 1; i <= qtdAlunos; i++){
+        array = [...array, i];
+
+    }
+
+        return array;
+}
+
+
+// teste
+/*function media (){
+    let todasNotas = [2,4,5,4,3];
+
+    let soma = 0;
+
+    for(let i in todasNotas){
+        soma += todasNotas[i];
+    }
+
+    let x = soma / todasNotas.length;
+
+    return x;
+
+
+}*/
